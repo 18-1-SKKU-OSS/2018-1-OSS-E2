@@ -1,10 +1,9 @@
 
 OSS software experiment E2 Github page
 
-Our Static Page:  
+Our Static Page: http://18.233.8.30/wordpress/
 Our Page: https://github.com/18-1-SKKU-OSS/Java
-Out Project Source: https://github.com/TheAlgorithms/Java
-
+Our Project Source: https://github.com/TheAlgorithms/Java
 
 # 알고리즘 - Java [![Build Status](https://travis-ci.org/TheAlgorithms/Java.svg)](https://travis-ci.org/TheAlgorithms/Java)
 
