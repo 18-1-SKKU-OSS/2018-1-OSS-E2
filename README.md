@@ -1,7 +1,7 @@
 
 OSS software experiment E2 Github page
 
-Our Static Page: http://18.233.8.30/wordpress/
+Our Static Page: http://mook0227.dothome.co.kr/			
 Our Page: https://github.com/18-1-SKKU-OSS/Java
 Our Project Source: https://github.com/TheAlgorithms/Java
 
