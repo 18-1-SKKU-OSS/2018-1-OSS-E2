@@ -94,7 +94,7 @@ __시간 복잡도__
 * 평균적인 경우: 정렬된 목록 사이의 차이에 따라 달라집니다.
 
 
-###### 더 자세히 보고 싶다면? [][shell-toptal]
+###### 더 자세히 보고 싶다면? [클릭][shell-toptal]
 
 
 ### 시간 복잡도 그래프
@@ -169,18 +169,18 @@ __복잡도__
 
 Conversions          |                                          Dynamic Programming   |Ciphers|Miscellaneous|
 -----------          |----------------------------------------------------------------|-------|-------------|
-[Any Base to Any Base](Conversions/AnyBaseToAnyBase.java)| [Coin Change](Dynamic%20Programming/CoinChange.java)|[Caesar](ciphers/Caesar.java)|[Heap Sort](misc/heap_sort.java)|
+[Any Base to Any Base](Conversions/AnyBaseToAnyBase.java)| [Coin Change](Dynamic%20Programming/CoinChange.java)|[Caesar](ciphers/Caesar.java)|[힙 솔트](misc/heap_sort.java)|
 [Any Base to Decimal](Conversions/AnyBaseToDecimal.java)|[Egg Dropping](Dynamic%20Programming/EggDropping.java)|[Columnar Transposition Cipher](ciphers/ColumnarTranspositionCipher.java)|[Palindromic Prime Checker](misc/PalindromicPrime.java)|
-[Binary to Decimal](Conversions/BinaryToDecimal.java)|[Fibonacci](Dynamic%20Programming/Fibonacci.java)|[RSA](ciphers/RSA.java)|더 나옵니다...|
-[Binary to HexaDecimal](Conversions/BinaryToHexadecimal.java)|[Kadane Algorithm](Dynamic%20Programming/KadaneAlgorithm.java)|곧 나옵니다...|
-[Binary to Octal](Conversions/BinaryToOctal.java)|[Knapsack](Dynamic%20Programming/Knapsack.java)|
-[Decimal To Any Base](Conversions/DecimalToAnyBase.java)|[Longest Common Subsequence](Dynamic%20Programming/LongestCommonSubsequence.java)|
-[Decimal To Binary](Conversions/DecimalToBinary.java)|[Longest Increasing Subsequence](Dynamic%20Programming/LongestIncreasingSubsequence.java)|
-[Decimal To Hexadecimal](Conversions/DecimalToHexaDecimal.java)|[Rod Cutting](Dynamic%20Programming/RodCutting.java)|
+[8진법 -> 10진법](Conversions/BinaryToDecimal.java)|[피보나치](Dynamic%20Programming/Fibonacci.java)|[RSA](ciphers/RSA.java)|더 나옵니다...|
+[2진법 -> 16진법](Conversions/BinaryToHexadecimal.java)|[Kadane Algorithm](Dynamic%20Programming/KadaneAlgorithm.java)|곧 나옵니다...|
+[2진법 -> 8진법](Conversions/BinaryToOctal.java)|[Knapsack](Dynamic%20Programming/Knapsack.java)|
+[2진법 -> n진법](Conversions/DecimalToAnyBase.java)|[Longest Common Subsequence](Dynamic%20Programming/LongestCommonSubsequence.java)|
+[10진법 -> 2진법](Conversions/DecimalToBinary.java)|[Longest Increasing Subsequence](Dynamic%20Programming/LongestIncreasingSubsequence.java)|
+[10진법 -> 16진법](Conversions/DecimalToHexaDecimal.java)|[Rod Cutting](Dynamic%20Programming/RodCutting.java)|
 훨씬 더 많이..|                                                    더 있어요...|
 
-### Data Structures
-Graphs|Heaps|Lists|Queues|
+### 자료 구조
+그래프|힙|리스트|큐|
 ------|-----|-----|------|
 [BFS](Data%20Structures/Graphs/BFS.java)|[Empty Heap Exception](Data%20Structures/Heaps/EmptyHeapException.java)|[Circle Linked List](Data%20Structures/Lists/CircleLinkedList.java)|[Generic Array List Queue](Data%20Structures/Queues/GenericArrayListQueue.java)|
 [DFS](Data%20Structures/Graphs/DFS.java)|[Heap](Data%20Structures/Heaps/Heap.java)|[Doubly Linked List](Data%20Structures/Lists/DoublyLinkedList.java)|[Queues](Data%20Structures/Queues/Queues.java)|
@@ -189,11 +189,11 @@ Graphs|Heaps|Lists|Queues|
 [Matrix Graphs](Data%20Structures/Graphs/MatrixGraphs.java)|[Min Heap](Data%20Structures/Heaps/MinHeap.java)|
 [PrimMST](Data%20Structures/Graphs/PrimMST.java)|
 
-Stacks|Trees|
+스택|트리|
 ------|-----|
 [Node Stack](Data%20Structures/Stacks/NodeStack.java)|[AVL Tree](Data%20Structures/Trees/AVLTree.java)|
 [Stack of Linked List](Data%20Structures/Stacks/StackOfLinkedList.java)|[Binary Tree](Data%20Structures/Trees/BinaryTree.java)|
-[Stacks](Data%20Structures/Stacks/Stacks.java)|And much more...|
+[Stacks](Data%20Structures/Stacks/Stacks.java)|그리고 더...|
 
 * [Bags](Data%20Structures/Bags/Bag.java)
 * [Buffer](Data%20Structures/Buffers/CircularBuffer.java)
