@@ -45,10 +45,10 @@ class BinarySearch implements SearchAlgorithm {
      * This method implements the Generic Binary Search
      *
      * @param 배열 바이너리 검색을 실시하는 배열
-?????* @param key 찾고있는 번호
-?????* @param left 하한
-?????* @param right 상한
-?????* @return 키의 위치를 리턴합니다
+     * @param key 찾고있는 번호
+     * @param left 하한
+     * @param right 상한
+     * @return 키의 위치를 리턴합니다
      **/
     private <T extends Comparable<T>> int search(T array[], T key, int left, int right){
         if (right < left) return -1; // this means that the key not found
