@@ -1,4 +1,4 @@
-package search;
+﻿package search;
 
 
 import java.util.Arrays;
@@ -11,14 +11,14 @@ import static java.lang.String.format;
  *
  *
  *
- * A ternary search algorithm is a technique in computer science for finding the minimum or maximum of a unimodal function
- * The algorithm determines either that the minimum or maximum cannot be in the first third of the domain
- * or that it cannot be in the last third of the domain, then repeats on the remaining third.
+ * 삼항 검색 알고리즘은 컴퓨터 과학에서 단봉 함수의 최소 또는 최대를 찾는 기술입니다
+ * 알고리즘은 최소 또는 최대가 도메인의 1/3에 위치 할 수 없음을 결정합니다.
+ * 도메인의 마지막 3 분의 1에있을 수 없다고 가정하면 나머지 3 분의 1에서 반복됩니다.
  *
- * Worst-case performance	Θ(log3(N))
- * Best-case performance	O(1)
- * Average performance	Θ(log3(N))
- * Worst-case space complexity	O(1)
+ * 최악의 경우	Θ(log3(N))
+ * 최상의 경우	O(1)
+ * 평균	Θ(log3(N))
+ * 최악의 경우 공간복잡도	O(1)
  *
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
@@ -31,9 +31,9 @@ import static java.lang.String.format;
 public class TernarySearch implements SearchAlgorithm{
 
     /**
-     * @param arr The **Sorted** array in which we will search the element.
-     * @param value The value that we want to search for.
-     * @return The index of the element if found.
+     * @param arr The **Sorted** array는 요소를 찾을 배열입니다
+     * @param value 찾고자 하는 값입니다
+     * @return The index-> 찾고자 하는 값에 해당되는 요소가 배열에 있으면 인덱스를 리턴합니다.
      * Else returns -1.
      */
     @Override
@@ -42,11 +42,11 @@ public class TernarySearch implements SearchAlgorithm{
     }
 
     /**
-     * @param arr The **Sorted** array in which we will search the element.
-     * @param key The value that we want to search for.
-     * @param start The starting index from which we will start Searching.
-     * @param end The ending index till which we will Search.
-     * @return Returns the index of the Element if found.
+      * @param arr 요소를 검색하는 ** Sorted ** 배열입니다.
+      * @param key 검색하고 싶은 값.
+      * @param start 검색을 개시하는 개시 인덱스.
+      * @param end 우리가 검색할 때 접근할 수 있는 마지막 인덱스.
+      * @return 발견된 경우 요소의 색인을 리턴합니다.
      * Else returns -1.
      */
     private <T extends Comparable<T>> int ternarySearch(T[] arr, T key, int start, int end) {
