@@ -10,13 +10,13 @@ import static java.lang.String.format;
  *
  *
  *
- * Binary search is one of the most popular algorithms
- * The algorithm finds the position of a target value within a sorted array
+ * 이진 검색은 가장 널리 사용되는 알고리즘 중 하나입니다.
+?* 알고리즘은 정렬 된 배열 내에서 대상 값의 위치를 찾습니다.
  *
- * Worst-case performance	O(log n)
- * Best-case performance	O(1)
- * Average performance	O(log n)
- * Worst-case space complexity	O(1)
+ * 최악의 경우	O(log n)
+ * 최상의 경우	O(1)
+ * 평균	O(log n)
+ * 최악의 경우 공간복잡도	O(1)
  *
  *
  * @author Varun Upadhyay (https://github.com/varunu28)
@@ -31,10 +31,10 @@ class BinarySearch implements SearchAlgorithm {
 
     /**
      *
-     * @param array is an array where the element should be found
-     * @param key is an element which should be found
-     * @param <T> is any comparable type
-     * @return index of the element
+     * @param array는 찾고자 하는 요소를 가지고 있는 배열입니다
+     * @param key는 찾고자 하는 요소입니다
+     * @param <T> 모든 비교 가능한 유형입니다
+     * @return index->요소의 인덱스를 리턴합니다.
      */
     @Override
     public  <T extends Comparable<T>> int find(T array[], T key) {
@@ -44,11 +44,11 @@ class BinarySearch implements SearchAlgorithm {
     /**
      * This method implements the Generic Binary Search
      *
-     * @param array The array to make the binary search
-     * @param key The number you are looking for
-     * @param left The lower bound
-     * @param right The  upper bound
-     * @return the location of the key
+     * @param 배열 바이너리 검색을 실시하는 배열
+     * @param key 찾고있는 번호
+     * @param left 하한
+     * @param right 상한
+     * @return 키의 위치를 리턴합니다
      **/
     private <T extends Comparable<T>> int search(T array[], T key, int left, int right){
         if (right < left) return -1; // this means that the key not found

@@ -4,14 +4,14 @@ import java.util.Random;
 import java.util.stream.Stream;
 
 /**
- * Linear search is the easiest search algorithm
- * It works with sorted and unsorted arrays (an binary search works only with sorted array)
- * This algorithm just compares all elements of an array to find a value
+ * 선형 검색은 가장 쉬운 검색 알고리즘입니다.
+?* 정렬된 배열, 정렬되지 않은 배열과 함께 작동합니다 (정렬 된 배열에서만 이진 검색이 작동 함)
+ *이 알고리즘은 배열의 모든 요소를 비교하여 값을 찾습니다.
  *
- * Worst-case performance	O(n)
- * Best-case performance	O(1)
- * Average performance	O(n)
- * Worst-case space complexity
+ * 최악의 경우	O(n)
+ * 최상의 경우	O(1)
+ * 평균	O(n)
+ * 최악의 경우 공간복잡도
  *
  *
  * @author Varun Upadhyay (https://github.com/varunu28)
@@ -27,9 +27,9 @@ public class LinearSearch implements SearchAlgorithm {
     /**
      * Generic Linear search method
      *
-     * @param array List to be searched
-     * @param value Key being searched for
-     * @return Location of the key
+     *	 @param array는 검색 대상 배열입니다
+     * @param value Key는 검색 대상의 키(값)입니다.
+     * @return->키의 위치를 리턴합니다
      */
     @Override
     public <T extends Comparable<T>> int find(T[] array, T value) {

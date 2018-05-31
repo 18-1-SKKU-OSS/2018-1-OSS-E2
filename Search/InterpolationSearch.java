@@ -10,10 +10,10 @@ import static java.lang.String.format;
  *
  * Interpolation search algorithm implementation
  *
- * Worst-case performance	 O(n)
- * Best-case performance	O(1)
- * Average performance	O(log(log(n))) if the elements are  uniformly distributed if not O(n)
- * Worst-case space complexity	O(1)
+ * 최악의 경우	 O(n)
+ * 최상의 경우	O(1)
+ * 평균	O(log(log(n))) 요소가 균일하게 분포하지 않은 경우 O(n)
+ * 최악의 경우 공간복잡도	O(1)
  *
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
@@ -23,12 +23,12 @@ class InterpolationSearch {
 
 
 	/**
-	 * @param array is a sorted array
-	 * @param key is a value what shoulb be found in the array
-	 * @return an index if the array contains the key unless -1
+	 * @param array는 정렬된 배열입니다.
+	 * @param key는 배열안에서 찾아야 하는 값입니다
+	 * @return an index->배열이 키값을 가지고 있으면 인덱스를 리턴합니다 unless -1
 	 */
 	public int find(int array[], int key) {
-		// Find indexes of two corners
+		// 왼쪽끝, 오른쪽 끝값들을 찾는다
 		int start = 0, end = (array.length - 1);
 	
 		// Since array is sorted, an element present
