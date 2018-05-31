@@ -1,4 +1,4 @@
-package search;
+﻿package search;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -8,15 +8,15 @@ import static java.lang.String.format;
 
 /**
  *
- * A iterative version of a ternary search algorithm
- * This is better way to implement the ternary search, because a recursive version adds some overhead to a stack.
- * But in java the compile can transform the recursive version to iterative implicitly,
- * so there are no much differences between these two algorithms
+  * 삼항 검색 알고리즘의 반복 버전
+  * 재귀적 버전은 스택에 약간의 오버 헤드를 추가하기 때문에 이것은 3 진 검색을 구현하는 더 좋은 방법입니다.
+  * 그러나 자바에서 컴파일은 재귀 버전을 암시 적으로 반복적으로 변형 할 수 있습니다.
+  * 이 두 알고리즘 간에는 큰 차이가 없습니다.
  *
- * Worst-case performance	Θ(log3(N))
- * Best-case performance	O(1)
- * Average performance	Θ(log3(N))
- * Worst-case space complexity	O(1)
+ * 최악의 경우	Θ(log3(N))
+ * 최상의 경우	O(1)
+ * 평균	Θ(log3(N))
+ * 최악의 경우 공간복잡도  O(1)
  *
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
