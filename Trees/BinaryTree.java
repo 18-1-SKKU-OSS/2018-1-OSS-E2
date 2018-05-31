@@ -124,7 +124,7 @@ class Tree{
 			if(temp == root)
 			root = null;
 
-			//This if/else assigns the new node to be either the left or right child of the parent
+			//이 if/else 문은 새로운 노드를 부모 노드의 왼쪽 혹은 오른쪽 자식 노드로 할당합니다.
 			else if(temp.parent.data < temp.data)
 			temp.parent.right = null;
 			else
@@ -132,15 +132,15 @@ class Tree{
 			return true;
 		}
 
-		//Two children
+		//두개의 자식
 		else if(temp.left != null && temp.right != null){
 			Node successor = findSuccessor(temp);
 
-			//The left tree of temp is made the left tree of the successor
+			//temp의 왼쪽 트리는 successor의 왼쪽 트리
 			successor.left = temp.left;
 			successor.left.parent = successor;
 
-			//If the successor has a right child, the child's grandparent is it's new parent
+			//successor  가 오른쪽 자식을 가지고 있다면, 그 자식의 grandparent (부모의 부모) 가 새로운 부모다.
 			if(successor.right != null && successor.parent != temp){
 				successor.right.parent = successor.parent;
 				successor.parent.left = successor.right;
@@ -153,11 +153,11 @@ class Tree{
 				return true;
 			}
 
-			//If you're not deleting the root
+			//root를 지우고 있지 않다면
 			else{
 				successor.parent = temp.parent;
 
-				//This if/else assigns the new node to be either the left or right child of the parent
+				//이 if/else 문은 새로운 노드를 부모의 왼쪽 혹은 오른쪽 노드로 할당한다.
 				if(temp.parent.data < temp.data)
 				temp.parent.right = successor;
 				else
@@ -165,30 +165,30 @@ class Tree{
 				return true;
 			}
 		}
-		//One child
+		//한 자식 
 		else{
-			//If it has a right child
+			//오른쪽 자식이 있다면
 			if(temp.right != null){
 				if(temp == root){
 					root = temp.right; return true;}
 
 					temp.right.parent = temp.parent;
 
-					//Assigns temp to left or right child
+					//temp를 왼쪽 혹은 오른쪽 자식으로 할당한다.
 					if(temp.data < temp.parent.data)
 					temp.parent.left = temp.right;
 					else
 					temp.parent.right = temp.right;
 					return true;
 				}
-				//If it has a left child
+				//왼쪽 자식이 있다면
 				else{
 					if(temp == root){
 						root = temp.left; return true;}
 
 						temp.left.parent = temp.parent;
 
-						//Assigns temp to left or right side
+						//temp를 왼쪽 혹은 오른쪽으로 할당한다.
 						if(temp.data < temp.parent.data)
 						temp.parent.left = temp.left;
 						else
@@ -199,11 +199,11 @@ class Tree{
 			}
 
 			/**
-			* This method finds the Successor to the Node given.
-			* Move right once and go left down the tree as far as you can
+			* 이 메소드는 주어진 노드의 successor를 찾습니다.
+			* 한 번 오른쪽으로 이동하고 최대한 멀리 트리의 왼쪽 아래로 갑니다.
 			*
-			* @param n Node that you want to find the Successor of
-			* @return The Successor of the node
+			* @param 당신이 찾고 싶은 Successor의 n 노드
+			* @Successor 반환
 			*/
 			public Node findSuccessor(Node n){
 				if(n.right == null)
@@ -218,7 +218,7 @@ class Tree{
 			}
 
 			/**
-			* Returns the root of the Binary Tree
+			* 이진 트리의 root 반환
 			*
 			* @return the root of the Binary Tree
 			*/
@@ -227,9 +227,9 @@ class Tree{
 			}
 
 			/**
-			* Prints leftChild - root - rightChild
+			* 왼쪽 자식 - root - 오른쪽 자식 출력
 			*
-			* @param localRoot The local root of the binary tree
+			* @param localRoot 이진 트리의 local root
 			*/
 			public void inOrder(Node localRoot){
 				if(localRoot != null){
@@ -240,9 +240,9 @@ class Tree{
 			}
 
 			/**
-			* Prints root - leftChild - rightChild
+			* root - 왼쪽 자식 - 오른쪽 자식 출력
 			*
-			* @param localRoot The local root of the binary tree
+			* @param localRoot 이진 트리의 local root
 			*/
 			public void preOrder(Node localRoot){
 				if(localRoot != null){
@@ -253,9 +253,9 @@ class Tree{
 			}
 
 			/**
-			* Prints rightChild - leftChild - root
+			* 오른쪽 자식 - 왼쪽 자식 - root 출력
 			*
-			* @param localRoot The local root of the binary tree
+			* @param localRoot 이진 트리의 local root
 			*/
 			public void postOrder(Node localRoot){
 				if(localRoot != null){
