@@ -53,9 +53,9 @@ public class TernarySearch implements SearchAlgorithm{
         if (start > end){
             return -1;
         }
-        /* First boundary: add 1/3 of length to start */
+       / * 첫 번째 경계 : 시작에 길이의 1/3을 더합니다 * /
         int mid1 = start + (end - start) / 3;
-        /* Second boundary: add 2/3 of length to start */
+        / * 두 번째 경계 : 시작에 길이의 2/3을 추가 * /
         int mid2 = start + 2 * (end - start) / 3;
 
         if (key.compareTo(arr[mid1]) == 0) {
@@ -65,17 +65,17 @@ public class TernarySearch implements SearchAlgorithm{
             return mid2;
         }
 
-        /* Search the first (1/3) rd part of the array.*/
+       / * 배열의 첫 번째 (1/3) 부분을 찾습니다. * /
 
         else if (key.compareTo(arr[mid1]) < 0) {
             return ternarySearch(arr, key, start, --mid1);
         }
-        /* Search 3rd (1/3)rd part of the array */
+        / * 배열의 3 번째 (1/3) 부분 검색 * /
 
         else if (key.compareTo(arr[mid2]) > 0) {
             return ternarySearch(arr, key, ++mid2, end);
         }
-        /* Search middle (1/3)rd part of the array */
+       / * 배열의 중간 부분 (1/3)을 검색 * /
 
         else {
             return ternarySearch(arr, key, mid1, mid2);
@@ -83,14 +83,14 @@ public class TernarySearch implements SearchAlgorithm{
     }
 
     public static void main(String[] args) {
-        //just generate data
+        // 데이터를 생성.
         Random r = new Random();
         int size = 100;
         int maxElement = 100000;
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //찾아야 하는 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         TernarySearch search = new TernarySearch();
