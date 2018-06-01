@@ -1,7 +1,7 @@
 package search;
 
 /**
- *  The common interface of most searching algorithms
+ *  대부분의 검색 알고리즘의 공용 인터페이스
  *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  *
