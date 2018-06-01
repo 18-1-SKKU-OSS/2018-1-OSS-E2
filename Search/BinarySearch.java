@@ -11,7 +11,7 @@ import static java.lang.String.format;
  *
  *
  * 이진 검색은 가장 널리 사용되는 알고리즘 중 하나입니다.
-?* 알고리즘은 정렬 된 배열 내에서 대상 값의 위치를 찾습니다.
+ * 알고리즘은 정렬 된 배열 내에서 대상 값의 위치를 찾습니다.
  *
  * 최악의 경우	O(log n)
  * 최상의 경우	O(1)
@@ -42,7 +42,7 @@ class BinarySearch implements SearchAlgorithm {
     }
 
     /**
-     * This method implements the Generic Binary Search
+     * 이 메소드는 일반 이진 검색을 구현합니다.
      *
      * @param 배열 바이너리 검색을 실시하는 배열
      * @param key 찾고있는 번호
@@ -68,17 +68,16 @@ class BinarySearch implements SearchAlgorithm {
         return median;
     }
 
-    // Driver Program
     public static void main(String[] args) {
 
-        //just generate data
+        //데이터 생성
         Random r = new Random();
         int size = 100;
         int maxElement = 100000;
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //발견되어야 할 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         BinarySearch search = new BinarySearch();
@@ -92,4 +91,3 @@ class BinarySearch implements SearchAlgorithm {
         System.out.println(format("Found by system method at an index: %d. Is equal: %b", toCheck, toCheck == atIndex));
     }
 }
-//hong

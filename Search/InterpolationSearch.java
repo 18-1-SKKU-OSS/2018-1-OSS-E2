@@ -31,23 +31,23 @@ class InterpolationSearch {
 		// 왼쪽끝, 오른쪽 끝값들을 찾는다
 		int start = 0, end = (array.length - 1);
 	
-		// Since array is sorted, an element present
-		// in array must be in range defined by corner
+		// 배열이 소트되기 (위해) 때문에, 요소가 존재합니다.
+		// 배열은 정의된 범위 내에 있어야합니다.
 		while (start <= end && key >= array[start] && key <= array[end])
 		{
-			// Probing the position with keeping
-			// uniform distribution in mind.
+			// 유지와 함께 위치 탐색
+			// 균일한 분포를 염두에 두어야합니다.
 			int pos = start + (((end-start) / (array[end]-array[start]))*(key - array[start]));
 	
-			// Condition of target found
+			// 발견될 타겟의 조건
 			if (array[pos] == key)
 				return pos;
 	
-			// If key is larger, key is in upper part
+			// 키가 크면, 키가 위쪽에 있습니다.
 			if (array[pos] < key)
 				start = pos + 1;
 	
-			// If key is smaller, x is in lower part
+			// 키가 작으면 x가 아래 부분에 있습니다.
 			else
 				end = pos - 1;
 		}
@@ -62,7 +62,7 @@ class InterpolationSearch {
 		int[] integers = IntStream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray();
 
 
-		//the element that should be found
+		//발견되어야 할 요소
 		Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
 		InterpolationSearch search = new InterpolationSearch();
