@@ -58,7 +58,7 @@ public class IterativeTernarySearch implements SearchAlgorithm {
 
 
     public static void main(String[] args) {
-        //just generate data
+        //데이터를 생성
         Random r = new Random();
         int size = 100;
         int maxElement = 100000;
@@ -68,7 +68,7 @@ public class IterativeTernarySearch implements SearchAlgorithm {
                 .toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //발견되어야 할 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         IterativeTernarySearch search = new IterativeTernarySearch();

@@ -28,7 +28,7 @@ import static java.lang.String.format;
 public final class IterativeBinarySearch implements SearchAlgorithm {
 
     /**
-     * This method implements an iterative version of binary search algorithm
+     * 이 메소드는 이진 검색 알고리즘의 반복 버전을 구현합니다.
      * 
      * @param array는 정렬된 배열입니다
      * @param key는 찾아야하는 값입니다.
@@ -66,7 +66,7 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).sorted().toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //발견되어야 할 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         IterativeBinarySearch search = new IterativeBinarySearch();

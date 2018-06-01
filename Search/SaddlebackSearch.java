@@ -35,7 +35,7 @@ public class SaddlebackSearch {
      */
     private static int[] find(int arr[][], int row, int col, int key) {
 
-        //array to store the answer row and column
+        //정답인 행과 열을 저장할 배열
         int ans[] = {-1, -1};
         if (row < 0 || col >= arr[row].length) {
             return ans;
@@ -45,11 +45,11 @@ public class SaddlebackSearch {
             ans[1] = col;
             return ans;
         }
-        //if the current element is greater than the given element then we move up
+        //현재 요소가 주어진 요소보다 큰 경우 위로 이동합니다.
         else if (arr[row][col] > key) {
             return find(arr, row - 1, col, key);
         }
-        //else we move right
+        //그렇지 않으면 우리는 오른쪽으로 움직입니다.
         return find(arr, row, col + 1, key);
     }
 
@@ -70,7 +70,7 @@ public class SaddlebackSearch {
             }
         }
         int ele = sc.nextInt();
-        //we start from bottom left corner
+        //우리는 왼쪽 하단부터 시작합니다.
         int ans[] = find(arr, rows - 1, 0, ele);
         System.out.println(ans[0] + " " + ans[1]);
         sc.close();

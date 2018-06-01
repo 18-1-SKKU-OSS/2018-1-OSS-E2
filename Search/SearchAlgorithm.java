@@ -10,10 +10,10 @@ public interface SearchAlgorithm {
 
     /**
      *
-     * @param key is an element which should be found
-     * @param array is an array where the element should be found
-     * @param <T> Comparable type
-     * @return first found index of the element
+      * @param key는 발견되어야 할 요소입니다.
+????? * @param array는 요소를 찾아야하는 배열입니다.
+????? * @param <T> 같은 타입
+????? * @return 최초로 발견된 요소의 인덱스
      */
     <T extends Comparable<T>> int find(T array[], T key);
 
