@@ -14,8 +14,11 @@ package heaps;
  * @author Nicolas Renard
  *힙은 트리와 닯은 자료구조로 특별한 방식을 추구합니다. 각 노드들은 원소(element)로 보며 부모노드는 최대 2개의 자식 노드를 가집니다. 
  * (사실 꼭 2개일 필요는 없지만 번역은 2개로 입니다.)
- *
- *
+ * 모든 원소들은 값(key)를 가지며 그 값들은 그 트리가 어떤 방식으로 세워졌는지의 척도가 됩니다. 예컨대, 최소 힙(min-heap)인 경우,
+ * 노드의 값들은 부모보다 작지 않아야 하며 자식보다 크지 않아야 합니다.(최대 힙(max-heap)은 이와 반대입니다.) 
+ * 모든 힙 관련 기능(삽입, 원소 삭제, 추출)들은 O(log n)에서 이뤄집니다.
+ * 저자: Nicolas Renard
+ * 번역: 박지열
  */
 public interface Heap {
     
@@ -24,6 +27,8 @@ public interface Heap {
      * @return the top element in the heap, the one with lowest key for min-heap or with
      * the highest key for max-heap
      * @throws Exception if heap is empty
+     * 가장 높은 원소의 값을 반환할 것(최소 힙이라면 가장 작은 값, 최대 힙이라면 가장 큰 값)
+     * 만약 힙이 빈 경우, 예외처리를 할 것  	
      */
     public abstract HeapElement getElement() throws EmptyHeapException;
     /**
