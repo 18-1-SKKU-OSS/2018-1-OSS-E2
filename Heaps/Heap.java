@@ -34,16 +34,16 @@ public interface Heap {
     /**
      * Inserts an element in the heap. Adds it to then end and toggle it until it finds its
      * right position.
-     * 
+     * 원소를 삽입합니다. 그리고 맞는 자리로 갈때까지 자리 배치를 하는 과정을 거쳐야 합니다
      * @param element an instance of the HeapElement class.
      */
     public abstract void insertElement(HeapElement element);
     
     /**
      * Delete an element in the heap.
-     * 
+     * 원소를 삭제합니다. 
      * @param elementIndex int containing the position in the heap of the element to be deleted.
-     */
+     */ 그리고 삭제된 원소의 위치를 리턴할 필요가 있습니다.
     public abstract void deleteElement(int elementIndex);
 
 }
