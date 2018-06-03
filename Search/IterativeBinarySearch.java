@@ -58,7 +58,6 @@ public final class IterativeBinarySearch implements SearchAlgorithm {
         return -1;
     }
 
-    //Only a main method for test purpose
     public static void main(String[] args) {
         Random r = new Random();
         int size = 100;

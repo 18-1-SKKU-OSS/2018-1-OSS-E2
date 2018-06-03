@@ -51,9 +51,9 @@ class BinarySearch implements SearchAlgorithm {
      * @return 키의 위치를 리턴합니다
      **/
     private <T extends Comparable<T>> int search(T array[], T key, int left, int right){
-        if (right < left) return -1; // this means that the key not found
+        if (right < left) return -1; // 키를 못찾았다는 뜻
 
-        // find median
+        // 중앙값 찾기
         int median = (left + right) >>> 1;
         int comp = key.compareTo(array[median]);
 
@@ -83,8 +83,7 @@ class BinarySearch implements SearchAlgorithm {
         BinarySearch search = new BinarySearch();
         int atIndex = search.find(integers, shouldBeFound);
 
-        System.out.println(String.format("Should be found: %d. Found %d at index %d. An array length %d"
-                , shouldBeFound, integers[atIndex], atIndex, size));
+        System.out.println(String.format("Should be found: %d. Found %d at index %d. An array length %d", shouldBeFound, integers[atIndex], atIndex, size));
 
 
         int toCheck = Arrays.binarySearch(integers, shouldBeFound);

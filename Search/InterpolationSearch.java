@@ -54,7 +54,6 @@ class InterpolationSearch {
 		return -1;
 	}
 
-	// Driver method 
 	public static void main(String[] args) {
 		Random r = new Random();
 		int size = 100;
