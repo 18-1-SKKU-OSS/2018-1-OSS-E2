@@ -25,9 +25,9 @@ import java.util.stream.Stream;
 public class LinearSearch implements SearchAlgorithm {
 
     /**
-     * Generic Linear search method
+     * 일반적인 선형 검색 방법
      *
-     *	 @param array는 검색 대상 배열입니다
+     * @param array는 검색 대상 배열입니다
      * @param value Key는 검색 대상의 키(값)입니다.
      * @return->키의 위치를 리턴합니다
      */
@@ -43,14 +43,14 @@ public class LinearSearch implements SearchAlgorithm {
 
 
     public static void main(String[] args) {
-        //just generate data
+        //데이터를 생성
         Random r = new Random();
         int size = 200;
         int maxElement = 100;
         Integer[] integers = Stream.generate(() -> r.nextInt(maxElement)).limit(size).toArray(Integer[]::new);
 
 
-        //the element that should be found
+        //우리가 찾아야 하는 요소
         Integer shouldBeFound = integers[r.nextInt(size - 1)];
 
         LinearSearch search = new LinearSearch();
