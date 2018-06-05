@@ -22,7 +22,7 @@ public class AnyBaseToAnyBase {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String n;
-		int b1=0,b2=0;
+		int b1 = 0,b2 = 0;
 		while (true) {
 			try {
 				System.out.print("Enter number: ");
