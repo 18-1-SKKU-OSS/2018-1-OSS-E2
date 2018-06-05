@@ -35,6 +35,8 @@ class BubbleSort implements SortAlgorithm {
         return array;
     }
 
+
+/*상수, 문자열 배열로 BubbleSort 실행*/
     // Driver Program
     public static void main(String[] args) {
 
