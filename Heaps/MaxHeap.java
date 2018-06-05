@@ -8,6 +8,8 @@ import java.util.List;
  * to its children's.
  * @author Nicolas Renard
  *
+ * 노드의 값이 부모보다 작지 않으면서도 자신보다 크지 않은 트
+ *저자 : Nicolas Renard
  */
 public class MaxHeap implements Heap {
     
