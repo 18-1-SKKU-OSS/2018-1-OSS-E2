@@ -16,7 +16,7 @@ import static java.lang.String.format;
  * 최악의 경우	O(log n)
  * 최상의 경우	O(1)
  * 평균	O(log n)
- * 최악의 경우 공간복잡도	O(1)
+ * 최악의 경우 공간복잡도 O(1)
  *
  *
  * @author Varun Upadhyay (https://github.com/varunu28)
