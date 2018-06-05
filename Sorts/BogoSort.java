@@ -11,6 +11,12 @@ import static sort.SortUtils.*;
  * @see SortAlgorithm
  *
  */
+
+/*
+1. 자료가 정렬된 상태인지 확인하고 정렬된 상태가 아니라면 모든 자료를 임의로 다시 섞는다.
+2. 정렬이 될 때까지 무한 반복한다.
+*/
+
 public class BogoSort implements SortAlgorithm {
 
     private static final Random random = new Random(); // 난수 발생기 생성
