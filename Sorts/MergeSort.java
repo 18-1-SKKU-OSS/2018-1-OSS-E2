@@ -60,8 +60,9 @@ class MergeSort implements SortAlgorithm {
      * merges two parts of an array in increasing order
      **/
 
+/*배열을 합치기*/
     private static <T extends Comparable<T>> void merge(T[] arr, T[] temp, int left, int mid, int right) {
-        System.arraycopy(arr, left, temp, left, right - left + 1);
+        System.arraycopy(arr, left, temp, left, right - left + 1); // temp에 array를 복사
 
 
         int i= left;
@@ -72,25 +73,26 @@ class MergeSort implements SortAlgorithm {
             if (temp[i].compareTo(temp[j]) <= 0) {
                 arr[k] = temp[i];
                 i++;
-            }
+            }		// i번째 값이 j번째 값보다 더 작으면 원래 배열인 arr에 합치기
             else {
                 arr[k] = temp[j];
                 j++;
-            }
-            k++;
+            }		// j번째 값이 i번째 값보다 더 작으면 원래 배열인 arr에 합치기
+
+            k++; // arr의 다음 위치에 저장할 준비
         }
 
         while (i <= mid) {
             arr[k] = temp[i];
             i++;
             k++;
-        }
+        } //위에서 j > right이 되었다면 
 
 	while (j <= right) {
 	    arr[k] = temp[j];
 	    j++;
 	    k++;
-	}
+	} // 위에서 i > mid가 되었다면
     }
 
     // Driver program
