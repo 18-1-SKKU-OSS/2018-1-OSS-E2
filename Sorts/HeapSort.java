@@ -42,6 +42,7 @@ public class HeapSort implements SortAlgorithm {
             if (rightIndex <= lastChild) { // if has right and left children
                 T left = heap[leftIndex];
                 T right = heap[rightIndex];
+
                 if (less(left, right) && less(left, root)) {
                     swap(heap, leftIndex, rootIndex);
                     heapSubtree(leftIndex, lastChild);
@@ -49,6 +50,8 @@ public class HeapSort implements SortAlgorithm {
                     swap(heap, rightIndex, rootIndex);
                     heapSubtree(rightIndex, lastChild);
                 }
+
+
             } else if (leftIndex <= lastChild) { // if no right child, but has left child
                 T left = heap[leftIndex];
                 if (less(left, root)) {
@@ -56,6 +59,8 @@ public class HeapSort implements SortAlgorithm {
                     heapSubtree(leftIndex, lastChild);
                 }
             }
+
+
         }
 
 
@@ -69,6 +74,7 @@ public class HeapSort implements SortAlgorithm {
             int rightIndex = root * 2 + 2;
             boolean hasLeftChild = leftIndex < heap.length;
             boolean hasRightChild = rightIndex < heap.length;
+
             if (hasRightChild) { //if has left and right
                 makeMinHeap(leftIndex);
                 makeMinHeap(rightIndex);
@@ -76,6 +82,7 @@ public class HeapSort implements SortAlgorithm {
             } else if (hasLeftChild) {
                 heapSubtree(root, heap.length - 1);
             }
+
         }
 
 
