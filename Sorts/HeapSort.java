@@ -27,7 +27,7 @@ public class HeapSort implements SortAlgorithm {
          */
         public Heap(T[] heap) {
             this.heap = heap;
-        }
+        }  // heap으로 사용할 배열을 받는다.
 
         /**
          * Heapifies subtree from top as root to last as last child
@@ -78,16 +78,22 @@ public class HeapSort implements SortAlgorithm {
             }
         }
 
+
+
+
         /**
          * Gets the root of heap
          *
          * @return root of heap
          */
+	/*
+	마지막 자손과 루트의 값을 교환한 후 기존 루트의 값을 얻는다.
+	*/
         private T getRoot(int size) {
             swap(heap, 0, size);
             heapSubtree(0, size - 1);
             return heap[size]; // return old root
-        }
+        } 
 
 
 
@@ -108,6 +114,7 @@ public class HeapSort implements SortAlgorithm {
         Heap<T> heap = new Heap<>(unsorted.toArray((T[]) new Comparable[unsorted.size()]));
 
         heap.makeMinHeap(0); // make min heap using index 0 as root.
+			        // min heap이 0번째 값을 루트로 사용하도록 한다.
         List<T> sorted =  new ArrayList<>(size);
         while (size > 0) {
             T min = heap.getRoot(--size);
