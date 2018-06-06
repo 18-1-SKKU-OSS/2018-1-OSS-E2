@@ -6,6 +6,8 @@ import java.util.List;
 /**
  * The class contains util methods
  *
+ * 특정 알고리즘이 아닌 유틸 메서드를 포함하고 있는 클래스이다.
+ *
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  *
  **/
