@@ -8,7 +8,7 @@ import java.util.List;
  * to its children's.
  * @author Nicolas Renard
  *
- * 노드의 값이 부모보다 작지 않으면서도 자신보다 크지 않은 트리
+ * 노드의 값이 부모보다 크지 않으면서도 자신보다 작지 않은 트리
  *저자 : Nicolas Renard
  */
 public class MaxHeap implements Heap {
@@ -82,7 +82,7 @@ public class MaxHeap implements Heap {
         deleteElement(0);
         return result;
     }
-
+s
     @Override
     public void insertElement(HeapElement element) {
         maxHeap.add(element);
