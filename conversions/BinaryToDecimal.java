@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * This class converts a Binary number to a Decimal number
+ * 이 클래스는 이진수를 10 진수로 변환합니다.
  * 
  * @author Unknown
  *
@@ -10,9 +10,8 @@ class BinaryToDecimal
 {
 	
 	/**
-	 * Main Method
+	 * 메인 메소드
 	 * 
-	 * @param args Command line arguments
 	 */
   public static void main(String args[])
   {
