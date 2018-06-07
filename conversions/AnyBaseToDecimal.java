@@ -32,7 +32,7 @@ public class AnyBaseToDecimal {
         int num = 0;
         int pow = 1;
 
-        for (int i=len-1; i>=0; i--) {
+        for (int i = len-1; i >= 0; i--) {
             if (valOfChar(inp_num.charAt(i)) >= base) {
                 return "Invalid Number";
             }
