@@ -4,9 +4,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Class for converting from "any" base to "any" other base, when "any" means from 2-36.
- * Works by going from base 1 to decimal to base 2. Includes auxiliary method for 
- * determining whether a number is valid for a given base.
+  *"any"가 2-36을 의미하는 경우 "any"에서 "any"로 변환하기위한 클래스.
+? * 기본 1에서 소수 10 진수로 이동하여 작동합니다.
+? * 숫자가 특정 기준에 유효한지 여부를 결정합니다.
  * 
  * @author Michael Rolland
  * @version 2017.10.10
@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class AnyBaseToAnyBase {
 	
-	// Smallest and largest base you want to accept as valid input
+	// 유효한 입력으로 허용하려는 최소 및 최대 베이스
 	static final int MINIMUM_BASE = 2;
 	static final int MAXIMUM_BASE = 36;
 	
@@ -53,21 +53,21 @@ public class AnyBaseToAnyBase {
 	}
 	
 	/**
-	 * Checks if a number (as a String) is valid for a given base.
+	 * 지정된 숫자에 대해 숫자 (String)가 유효한지 검사합니다.
 	 */
 	public static boolean validForBase(String n, int base) {
 		char[] validDigits = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E',
 				'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
 				'W', 'X', 'Y', 'Z'};
-		// digitsForBase contains all the valid digits for the base given
+		// digitsForBase는 주어진 기본에 대한 모든 유효 숫자를 포함합니다.
 		char[] digitsForBase = Arrays.copyOfRange(validDigits, 0, base);
 		
-		// Convert character array into set for convenience of contains() method
+		// contains () 메서드의 편의를 위해 문자 배열을 집합으로 변환합니다.
 		HashSet<Character> digitsList = new HashSet();
 		for (int i=0; i<digitsForBase.length; i++)
 			digitsList.add(digitsForBase[i]);
 		
-		// Check that every digit in n is within the list of valid digits for that base.
+		// n의 모든 숫자가 해당 기준의 유효 자릿수 목록에 있는지 확인하십시오.
 		for (char c : n.toCharArray()) 
 			if (!digitsList.contains(c))
 				return false;
@@ -76,53 +76,52 @@ public class AnyBaseToAnyBase {
 	}
 	
 	/**
-	 * Method to convert any integer from base b1 to base b2. Works by converting from b1 to decimal,
-	 * then decimal to b2.
-	 * @param n The integer to be converted.
-	 * @param b1 Beginning base.
-	 * @param b2 End base.
-	 * @return n in base b2.
+	 * 기본 b1에서 b2로 정수를 변환하는 메소드. b1에서 10 진수로 변환하여 작동합니다.
+	* 다음 십진수는 b2.
+	* @param n 변환 할 정수.
+	* @param b1 베이스 기준.
+	* @param b2 끝 기준입니다.
+	 * @return n
 	 */
 	public static String base2base(String n, int b1, int b2) {
-		// Declare variables: decimal value of n, 
-		// character of base b1, character of base b2,
-		// and the string that will be returned.
+		// 변수 선언 : 10 진수 값 n,
+		//베이스 b1의 문자,베이스 b2의 문자,
+	  	// 및 반환 될 문자열을 반환합니다.
 		int decimalValue = 0, charB2;
 		char charB1;
 		String output="";
-		// Go through every character of n
+		// n의 모든 문자를 살펴본다.
 		for (int i=0; i<n.length(); i++) {
-			// store the character in charB1
+			// charB1에 문자를 저장한다.
 			charB1 = n.charAt(i);
-			// if it is a non-number, convert it to a decimal value >9 and store it in charB2
+			// 숫자가 아닌 경우 10 진수 값으로 변환하여 charB2에 저장합니다.
 			if (charB1 >= 'A' && charB1 <= 'Z') 
 				charB2 = 10 + (charB1 - 'A');
-			// Else, store the integer value in charB2
+			// 그렇지 않으면 정수 값을 charB2에 저장하십시오.
 			else 
 				charB2 = charB1 - '0';
-			// Convert the digit to decimal and add it to the
-			// decimalValue of n
-			decimalValue = decimalValue * b1 + charB2;
+			// 자릿수를 10 진수로 변환하고
+	 		// n의 decimalValue = decimalValue * b1 + charB2;
 		}
 		
-		// Converting the decimal value to base b2:
-		// A number is converted from decimal to another base
-		// by continuously dividing by the base and recording 
-		// the remainder until the quotient is zero. The number in the
-		// new base is the remainders, with the last remainder
-		// being the left-most digit.
-		
-		// While the quotient is NOT zero:
+		// 10 진수 값을 기본 b2로 변환 :
+		// 숫자가 소수에서 다른 기본으로 변환됩니다.
+		//베이스로 계속 나눈다
+		// 몫이 0이 될 때까지 나머지,
+		// 새로운 베이스에 있는 수는 나머지이다. 마지막 나머지는
+		// 맨 왼쪽 숫자입니다.
+
+		// 몫이 0이 아닌 동안 :
 		while (decimalValue != 0) {
-			// If the remainder is a digit < 10, simply add it to
-			// the left side of the new number.
+			// 나머지가 10보다 작은 숫자 인 경우
+			// 새로운 번호의 왼쪽.
 			if (decimalValue % b2 < 10) 
 				output = Integer.toString(decimalValue % b2) + output;
-			// If the remainder is >= 10, add a character with the
-			// corresponding value to the new number. (A = 10, B = 11, C = 12, ...)
+			// 나머지가> = 10 인 경우
+			// 새 값에 해당하는 값. (A = 10, B = 11, C = 12, ...)
 			else
 				output = (char)((decimalValue % b2)+55) + output;
-			// Divide by the new base again
+			// 새베이스로 다시 나눕니다.
 			decimalValue /= b2;
 		}
 		return output;
