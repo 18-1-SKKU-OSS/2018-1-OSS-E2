@@ -1,6 +1,12 @@
 import static java.lang.System.out;
 import java.util.Arrays;
 
+/*
+	교환정렬 알고리즘의 한 종류이다.
+	거품정렬과 비슷하게 인접 원소들을 스왑하여 정렬한다.
+*/
+
+
 public class CombSort {
         public static void main(String[] args) {
 
