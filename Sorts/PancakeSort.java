@@ -9,6 +9,10 @@ import static sort.SortUtils.*;
  * @since 2018-04-10
  *
  **/
+
+/*
+팬케이크 정렬 알고리즘은 펜케이크를 뒤집듯이 배열을 뒤집어 정렬을 하는 알고리즘이다.
+*/
 public class PancakeSort implements SortAlgorithm {
 
 
@@ -16,6 +20,7 @@ public class PancakeSort implements SortAlgorithm {
     public <T extends Comparable<T>> T[] sort(T[] array){
         int size = array.length;
 
+	// 가장 큰 크기를 갖는 원소를 찾는다.
         for (int i = 0; i < size; i++) {
             T max = array[0];
             int index = 0;
@@ -25,6 +30,7 @@ public class PancakeSort implements SortAlgorithm {
                     index = j;
                 }
             }
+	// 그 후 가장 큰 크기의 원소가 제일 뒤에 오도록 배열의 일부를 뒤집는다.
             flip(array, index, array.length - 1 - i);
         }
         return array;
