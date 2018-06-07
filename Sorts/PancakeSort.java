@@ -12,6 +12,8 @@ import static sort.SortUtils.*;
 
 /*
 팬케이크 정렬 알고리즘은 펜케이크를 뒤집듯이 배열을 뒤집어 정렬을 하는 알고리즘이다.
+
+펜케이크가 크기와 관계없이 쌓여 있다고 할 때, 우리는 뒤집개를 이용하여 가장 큰 팬케이크가 맨 밑으로 오도록 뒤집는다. 이와 같은 과정을 반복하여 정렬을 완료한다.
 */
 public class PancakeSort implements SortAlgorithm {
 
