@@ -1,6 +1,6 @@
 import java.util.*;
 /**
- * Converts any Binary Number to a Hexadecimal Number
+ * 모든 이진수를 16 진수로 변환합니다.
  * 
  * @author Nishita Aggarwal
  *
@@ -8,17 +8,15 @@ import java.util.*;
 public class BinaryToHexadecimal {
    
 	/**
-	 * This method converts a binary number to
-	 * a hexadecimal number.
-	 * 
-	 * @param binary The binary number
-	 * @return The hexadecimal number
+	*이 메소드는 이진수를 16 진수로 변환합니다.
+	* @param binary 이진수
+	* @return 16 진수
 	 */ 
 	static String binaryToHex(int binary)
 	{
-		//hm to store hexadecimal codes for binary numbers within the range: 0000 to 1111 i.e. for decimal numbers 0 to 15
+		// hm 범위의 2 진수에 대한 16 진수 코드를 저장합니다. 0000에서 1111까지, 즉 10 진수 0에서 15까지
 		HashMap<Integer,String> hm=new HashMap<>();	
-		//String to store hexadecimal code
+		// 16 진수 코드를 저장할 문자열
 		String hex="";
 		int i;
 		for(i=0 ; i<10 ; i++)
@@ -29,7 +27,7 @@ public class BinaryToHexadecimal {
 		int currbit;
 		while(binary != 0)
 		{
-			int code4 = 0;	//to store decimal equivalent of number formed by 4 decimal digits
+			int code4 = 0;	// 4 진수로 구성된 숫자에 해당하는 10 진수를 저장합니다.
 			for(i=0 ; i<4 ; i++)
 			{
 				currbit = binary % 10;
