@@ -3,6 +3,11 @@ package sort;
 import static java.lang.System.out;
 import java.util.Arrays;
 
+/*
+	분배 정렬의 한 종류
+	원래의 배열 공간보다 더 큰 임의의 공간(비둘기집)을 만들어, 원소(비둘기)를 차례로 넣은 다음, 원래 위치로 정렬시키는 방식
+*/
+
 
 public class PigeonholeSort {
 
