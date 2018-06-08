@@ -6,6 +6,9 @@ import static sort.SortUtils.print;
 /**
  *  @author Podshivalov Nikita (https://github.com/nikitap492)
  */
+/*
+자료들이 cycle 관계에 있는 그룹을 찾아내어 정렬 기준에 맞게 자료들을 회전(rotate)시켜 정렬하는 방법이다.
+*/
 class CycleSort implements SortAlgorithm {
 
 
@@ -68,7 +71,7 @@ class CycleSort implements SortAlgorithm {
     }
 
 
-
+// 상수형 배열으로 cycle sort 수행
     public static void main(String[] args) {
         Integer arr[] = { 4, 23, 6, 78, 1, 26, 11, 23 , 0, -6, 3, 54, 231, 9, 12 };
         CycleSort cycleSort = new CycleSort();
