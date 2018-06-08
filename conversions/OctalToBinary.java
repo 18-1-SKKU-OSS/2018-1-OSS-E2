@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Converts any Octal number to a Binary number
+ * 8 진수를 2 진수로 변환합니다.
  * 
  * @author Zachary Jones
  *
@@ -9,9 +9,8 @@ import java.util.Scanner;
 public class OctalToBinary {
 
 	/**
-	 * Main method
+	 * 메인 메소드
 	 * 
-	 * @param args Command line arguments
 	 */
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
@@ -21,11 +20,8 @@ public class OctalToBinary {
 	}
 	
 	/**
-	 * This method converts an octal number
-	 * to a binary number.
-	 * 
-	 * @param o The octal number
-	 * @return The binary number
+	 * 이 메소드는 8 진수를 이진수로 변환합니다.
+	 * @param o -> 8진수
 	 */
 	public static int convertOctalToBinary(int o) {
 		Scanner scan;
@@ -35,7 +31,7 @@ public class OctalToBinary {
 		
 			System.out.println("Octal to Binary");
 			scan = new Scanner(System.in);
-			// Entering the needed number
+			// 필요한 수를 입력합니다.
 			System.out.println("\nEnter the number : ");
 			num = Integer.parseInt(scan.nextLine(), 8);
 		}
