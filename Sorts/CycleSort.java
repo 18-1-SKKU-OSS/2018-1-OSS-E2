@@ -16,44 +16,45 @@ class CycleSort implements SortAlgorithm {
     public <T extends Comparable<T>> T[] sort(T[] arr) {
         int n = arr.length;
 
-        // traverse array elements
+        // traverse array elements  //배열 요소들을 쭉 확인한다.
         for (int j = 0; j <= n - 2; j++) {
-            // initialize item as starting point
+            // initialize item as starting point //item을 시작점으로 초기화한다.
             T item = arr[j];
 
-            // Find position where we put the item.
+            // Find position where we put the item.  //item을 넣을 위치를 찾는다.
             int pos = j;
             for (int i = j + 1; i < n; i++)
                 if (less(arr[i], item)) pos++;
 
-            // If item is already in correct position
+            // If item is already in correct position  //만약 item이 이미 정확한 위치에 있다면
             if (pos == j)  continue;
 
-            // ignore all duplicate elements
+            // ignore all duplicate elements  //모든 중복된 요소를 무시한다.
             while (item.compareTo(arr[pos]) == 0)
                 pos += 1;
 
-            // put the item to it's right position
+            // put the item to it's right position //item을 정확한 위치에 넣는다.
             if (pos != j) {
                 item = replace(arr, pos, item);
             }
 
-            // Rotate rest of the cycle
+            // Rotate rest of the cycle //나머지 사이클을 회전한다.
             while (pos != j) {
                 pos = j;
 
-                // Find position where we put the element
+                // Find position where we put the element. //요소를 넣을 위치를 찾는다.
+
                 for (int i = j + 1; i < n; i++)
                     if (less(arr[i], item)){
                         pos += 1;
                     }
 
 
-                // ignore all duplicate elements
+                // ignore all duplicate elements  //모든 중복된 요소를 무시한다.
                 while (item.compareTo(arr[pos]) == 0)
                     pos += 1;
 
-                // put the item to it's right position
+                // put the item to it's right position // item을 정확한 위치에 넣는다.
                 if (item != arr[pos]) {
                     item = replace(arr, pos, item);
                 }
