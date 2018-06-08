@@ -16,10 +16,9 @@ import static sort.SortUtils.*;
 Quick Sort는 기준인 pivot을 기준으로 pivot보다 작으면 왼쪽으로, pivot보다 크면 오른쪽으로 이동시키면서 정렬하는 방식이다.
 */
 
+
+
 class QuickSort implements SortAlgorithm {
-
-
-
     /**
      * This method implements the Generic Quick Sort
      *
@@ -42,8 +41,6 @@ class QuickSort implements SortAlgorithm {
      * @param array The array to be sorted
      *
      **/
-
-
 // pivot으로 정렬을 마치고 나면 pivot으로 구분된 양쪽의 부분에 대하여 같은 정렬 과정을 반복한다.
     private static <T extends Comparable<T>> void doSort(T[] array, int left, int right) {
         if (left < right) {
@@ -52,6 +49,9 @@ class QuickSort implements SortAlgorithm {
             doSort(array, pivot , right);
         }
     }
+
+
+
 
     /**
      * This method finds the partition index for an array
@@ -85,6 +85,9 @@ class QuickSort implements SortAlgorithm {
         }
         return left;
     }
+
+
+
 
      // 상수형 배열과 문자형 배열으로 Quick Sort 실행
     // Driver Program
