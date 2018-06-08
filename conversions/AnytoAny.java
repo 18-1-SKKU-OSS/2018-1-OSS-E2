@@ -1,8 +1,8 @@
 package Java.Conversions;
 
 import java.util.Scanner;
-//given a source number , source base, destination base, this code can give you the destination number.
-//sn ,sb,db ---> ()dn  .   this is what we have to do    .
+// 소스 번호, 소스 코드, 대상 코드를 지정하면이 코드가 목적지 번호를 제공 할 수 있습니다.
+// sn, sb, db ---> () dn. 이것이 우리가해야 할 일입니다.
 
 public class AnytoAny {
 
