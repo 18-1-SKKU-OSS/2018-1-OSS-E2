@@ -20,13 +20,13 @@ public class SelectionSort implements SortAlgorithm {
      * This method implements the Generic Selection Sort
      *
      * @param arr The array to be sorted
-     * Sorts the array in increasing order
+     * Sorts the array in increasing order // 오름차순으로 정렬한다.
      **/
     @Override
     public <T extends Comparable<T>> T[] sort(T[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
-            // Initial index of min
+            // Initial index of min // min의 값 초기화
             int min = i;
 
             for (int j = i +1 ; j < n; j++) {
@@ -35,7 +35,7 @@ public class SelectionSort implements SortAlgorithm {
                 }
             }
 
-            // Swapping if index of min is changed
+            // Swapping if index of min is changed // 최솟값인 min이 변경되었다면 swap하여 정렬한다.
             if (min != i) {
                 swap(arr, i , min);
             }
