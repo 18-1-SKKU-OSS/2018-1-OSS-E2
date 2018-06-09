@@ -1,7 +1,6 @@
 /**
  *
  * @author Varun Upadhyay (https://github.com/varunu28)
- *
  */
 
 public class CoinChange {
