@@ -1,5 +1,5 @@
 /**
- + + * Converts any Octal Number to HexaDecimal 
+ + + * 8 진수를 16진수로 변환합니다.
  + + * 
  + + * @author Tanmay Joshi
  + + *
@@ -10,11 +10,8 @@ import java.util.Scanner;
 public class OctalToHexadecimal {
 	
   /**
- + +	 * This method converts a Octal number to
- + +	 * a decimal number
+ + +	 * 이 메소드는 8 진수를 십진수로 변환합니다.
  + +	 * 
- + +	 * @param The Octal Number
- + +	 * @return The Decimal number
  + +	 */ 
  public static int OctToDec(String s)
  {
@@ -30,16 +27,13 @@ public class OctalToHexadecimal {
 }
 
 /**
- + +	 * This method converts a Decimal number to
- + +	 * a Hexadecimal number
+ + +	 *이 메소드는 십진수를 16진수로 변환합니다.
  + +	 * 
- + +	 * @param The Decimal Number
- + +	 * @return The Hexadecimal number
  + +	 */ 
 public static String DecimalToHex(int d) {
     String digits = "0123456789ABCDEF";
-    if (d <= 0) 
-		return "0";  
+    if (d <= 0) return "0"; 
+ 
     String hex = "";
     while (d > 0) {
         int digit = d % 16;              
@@ -49,14 +43,13 @@ public static String DecimalToHex(int d) {
     return hex;
 }
 
-           //Driver Program
 public static void main ( String args[]) {
 		
      Scanner input = new Scanner(System.in);
      System.out.print("Enter the Octal number: ");
-     String oct  = input.next();                     //Take octal number as input from user in a string
-     int decimal = OctToDec(oct);                    //Pass the octal number to function and get converted deciaml form
-     String hex = DecimalToHex(decimal);             //Pass the decimla number to function and get converted Hex form of the number
+     String oct  = input.next();                     //문자열에서 사용자의 입력으로 8 진수를 가져옵니다.
+     int decimal = OctToDec(oct);                    //함수에 8 진수를 전달하고 변환 된 10 진수 형식을 얻습니다.
+     String hex = DecimalToHex(decimal);             //함수에 십진수를 전달하고 숫자의 16 진수 형식으로 변환합니다.
      System.out.println("The Hexadecimal equivalant is: "+hex);
  }
 }
