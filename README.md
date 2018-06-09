@@ -1,7 +1,7 @@
 
 OSS software experiment E2 Github page
 
-Our Static Page: http://mook0227.dothome.co.kr/
+Our Static Page: http://13.125.171.132/
 
 Our Page: https://github.com/18-1-SKKU-OSS/Java
 
