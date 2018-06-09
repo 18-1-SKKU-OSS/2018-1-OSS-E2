@@ -14,6 +14,10 @@ import static sort.SortUtils.print;
  * @author Podshivalov Nikita (https://github.com/nikitap492)
  *
  */
+
+/*
+counting sort, 즉 계수정렬은 각 숫자가 몇 개 있는지 개수를 세어서 다른 한 배열에 저장해놓은 뒤에 정렬은 하는 알고리즘이다.
+*/
 class CountingSort implements SortAlgorithm {
 
 
@@ -68,6 +72,8 @@ class CountingSort implements SortAlgorithm {
                 .collect(toList());
     }
 
+
+// 상수형 배열과 문자열형 배열으로 counting sort 실행
     // Driver Program
     public static void main(String[] args) {
         // Integer Input
