@@ -7,7 +7,6 @@ import java.io.InputStreamReader;
  *
  */
 
-// Driver program
 public class AnyBaseToDecimal {
     public static void main (String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,10 +20,10 @@ public class AnyBaseToDecimal {
         br.close();
     }
 
-    /**
-      *이 메소드는 모든 기본 입력의 10 진수 값을 생성합니다.
-????? * @param inp_num 10 진수 값과 정수 형식의 기본 문자열이 필요합니다.
-????? * @return 10 진수의 문자열 형식
+     /*
+       *이 메소드는 모든 기본 입력의 10 진수 값을 생성합니다.
+       * @param inp_num 10 진수 값과 정수 형식의 기본 문자열이 필요합니다.
+       * @return 10 진수의 문자열 형식
      */
 
     public static String convertToDecimal(String inp_num, int base) {
@@ -44,8 +43,8 @@ public class AnyBaseToDecimal {
 
     /**
       * 이 메서드는 입력 문자의 정수 값을 생성하고 이를 반환합니다.
-????? * @param c 정수형의 값을 필요로하는 Char
-????? * @return 정수 값
+      * @param c 정수형의 값을 필요로하는 Char
+      * @return 정수 값
      */
 
     public static int valOfChar(char c) {

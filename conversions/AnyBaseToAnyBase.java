@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 /**
   *"any"가 2-36을 의미하는 경우 "any"에서 "any"로 변환하기위한 클래스.
-? * 기본 1에서 소수 10 진수로 이동하여 작동합니다.
-? * 숫자가 특정 기준에 유효한지 여부를 결정합니다.
+  * 기본 1에서 소수 10 진수로 이동하여 작동합니다.
+  * 숫자가 특정 기준에 유효한지 여부를 결정합니다.
  * 
  * @author Michael Rolland
  * @version 2017.10.10
@@ -18,7 +18,6 @@ public class AnyBaseToAnyBase {
 	static final int MINIMUM_BASE = 2;
 	static final int MAXIMUM_BASE = 36;
 	
-	// Driver
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		String n;
@@ -52,7 +51,7 @@ public class AnyBaseToAnyBase {
 		System.out.println(base2base(n, b1, b2));
 	}
 	
-	/**
+	/*
 	 * 지정된 숫자에 대해 숫자 (String)가 유효한지 검사합니다.
 	 */
 	public static boolean validForBase(String n, int base) {
@@ -117,7 +116,7 @@ public class AnyBaseToAnyBase {
 			// 새로운 번호의 왼쪽.
 			if (decimalValue % b2 < 10) 
 				output = Integer.toString(decimalValue % b2) + output;
-			// 나머지가> = 10 인 경우
+			// 나머지가 > = 10 인 경우
 			// 새 값에 해당하는 값. (A = 10, B = 11, C = 12, ...)
 			else
 				output = (char)((decimalValue % b2)+55) + output;
