@@ -1,5 +1,5 @@
 /**
- + * Converts any Hexadecimal Number to Octal 
+ + * 16 진수를 8 진수로 변환합니다.
  + * 
  + * @author Tanmay Joshi
  + *
@@ -9,11 +9,8 @@ import java.util.Scanner;
 public class HexToOct
 { 
 	/**
- +	 * This method converts a Hexadecimal number to
- +	 * a decimal number
- +	 * 
- +	 * @param The Hexadecimal Number
- +	 * @return The Decimal number
+ +	 * 이 메서드는 16 진수를 10 진수로 변환합니다.
+ +	 *  
  +	 */ 
     public static int hex2decimal(String s)
     {
@@ -30,11 +27,8 @@ public class HexToOct
     } 
 	
 	/**
- +	 * This method converts a Decimal number to
- +	 * a octal number
+ +	 * 이 메서드는 10 진수를 8 진수로 변환합니다.
  +	 * 
- +	 * @param The Decimal Number
- +	 * @return The Octal number
  +	 */ 
 	public static int decimal2octal(int q)
 	{
@@ -51,7 +45,7 @@ public class HexToOct
 		octnum/=10;
 		return octnum;
 	}
-	// Main method that gets the hex input from user and converts it into octal.
+	// 사용자로부터 16 진수 입력을 받아 이를 8 진법으로 변환하는 주요 메소드.
     public static void main(String args[])
     {
         String hexadecnum;
@@ -61,11 +55,11 @@ public class HexToOct
         System.out.print("Enter Hexadecimal Number : ");
         hexadecnum = scan.nextLine();      
         
-        // first convert hexadecimal to decimal
+        // 먼저 16 진수를 10 진수로 변환합니다.
         
-        decnum = hex2decimal(hexadecnum);       //Pass the string to the hex2decimal function and get the decimal form in variable decnum
+        decnum = hex2decimal(hexadecnum);      // 문자열을 hex2decimal 함수에 전달하고 decnum 변수에 10 진수 형식을 가져옵니다.
 		
-        // convert decimal to octal
+       // 10 진수를 8 진수로 변환합니다.
         octalnum=decimal2octal(decnum);
 	System.out.println("Number in octal: "+octalnum);
  

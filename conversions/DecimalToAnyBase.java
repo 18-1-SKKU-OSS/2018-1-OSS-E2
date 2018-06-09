@@ -8,7 +8,6 @@ import java.util.ArrayList;
  *
  */
 
-// Driver Program
 public class DecimalToAnyBase {
     public static void main (String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -27,9 +26,9 @@ public class DecimalToAnyBase {
     }
 
     /**
-     * This method produces a String value of any given input decimal in any base
-     * @param inp Decimal of which we need the value in base in String format
-     * @return string format of the converted value in the given base
+      *이 메소드는 모든 입력 십진수의 String 값을 어떠한 다른 기준으로 생성합니다.
+????? * @param inp 10 진수로 base에서 String 형식으로 값 필요
+????? * @return 주어진 기본에서 변환 된 값의 문자열 형식
      */
 
     public static String convertToAnyBase(int inp, int base) {
@@ -51,9 +50,9 @@ public class DecimalToAnyBase {
     }
 
     /**
-     * This method produces character value of the input integer and returns it
-     * @param num integer of which we need the character value of
-     * @return character value of input integer
+    *이 메서드는 입력 정수의 문자 값을 생성하고 이를 반환합니다.
+???? * @param num 캐릭터의 값이 필요한 정수.
+?????* @return 문자 값
      */
 
     public static char reVal(int num) {

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * This class converts a Decimal number to a Binary number
+ * 이 클래스는 10 진수를 2 진수로 변환합니다.
  * 
  * @author Unknown
  *
@@ -9,9 +9,8 @@ import java.util.Scanner;
 class DecimalToBinary {
 
     /**
-     * Main Method
+     * 메인 메소드
      * 
-     * @param args Command Line Arguments
      */
     public static void main(String args[]) {
         conventionalConversion();
@@ -19,9 +18,7 @@ class DecimalToBinary {
     }
 
     /**
-     * This method converts a decimal number 
-     * to a binary number using a conventional
-     * algorithm.
+     *이 방법은 기존 알고리즘을 사용하여 10 진수를 2 진수로 변환합니다.
      */
     public static void conventionalConversion() {
         int n, b = 0, c = 0, d;
@@ -37,9 +34,7 @@ class DecimalToBinary {
     }
 
     /**
-     * This method converts a decimal number 
-     * to a binary number using a bitwise
-     * algorithm
+     *이 방법은 기존 알고리즘을 사용하여 10 진수를 2 진수로 변환합니다.
      */
     public static void bitwiseConversion() {
         int n, b = 0, c = 0, d;

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HexaDecimalToDecimal {
 
-    // convert hexadecimal to decimal
+    // 16 진수를 10 진수로 변환합니다.
     public static int getHexaToDec(String hex){
         String digits = "012345678910ABCDEFF";
         hex = hex.toUpperCase();
@@ -17,7 +17,7 @@ public class HexaDecimalToDecimal {
         return val;
     }
 
-    // Main method gets the hexadecimal input from user and converts it into Decimal output.
+   // Main 메서드는 사용자로부터 16 진수 입력을 가져와 Decimal 출력으로 변환합니다.
 
     public static void main(String args[])
     {
@@ -28,13 +28,13 @@ public class HexaDecimalToDecimal {
         System.out.print("Enter Hexadecimal Number : ");
         hexa_Input = scan.nextLine();
 
-        // convert hexadecimal to decimal
+        // 16 진수를 10 진수로 변환합니다.
 
         dec_output = getHexaToDec(hexa_Input);
-        /*
-        Pass the string to the getHexaToDec function
-        and it returns the decimal form in the variable dec_output.
-        */
+      / *
+???????? 문자열을 getHexaToDec 함수에 전달하십시오.
+???????? dec_output 변수에 10 진수 형식을 리턴합니다.
+????? * /
         System.out.println("Number in Decimal: "+dec_output);
 
 
