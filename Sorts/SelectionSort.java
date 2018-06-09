@@ -10,6 +10,9 @@ import static sort.SortUtils.*;
  * @see SortAlgorithm
  *
  */
+/*
+가장 작은 값을 찾아서 swap하는 방식으로 정렬하는 알고리즘이다.
+*/
 
 public class SelectionSort implements SortAlgorithm {
 
@@ -41,6 +44,8 @@ public class SelectionSort implements SortAlgorithm {
         return arr;
     }
 
+
+// 상수형 배열과 문자열형 배열으로 Selection Sort 실행
     // Driver Program
     public static void main(String[] args) {
 
