@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Converts any Octal Number to a Decimal Number
+ * 8 진수를 10 진수로 변환r
  * 
  * @author Zachary Jones
  *
@@ -9,10 +9,8 @@ import java.util.Scanner;
 public class OctalToDecimal {
 
 	/**
-	 * Main method
+	 * 메인 메소드
 	 * 
-	 * @param args
-	 *            Command line arguments
 	 */
 	public static void main(String args[]) {
 		Scanner sc = new Scanner(System.in);
@@ -25,16 +23,13 @@ public class OctalToDecimal {
 	}
 
 	/**
-	 * This method converts an octal number to a decimal number.
+	 * 이 메소드는 8 진수를 10 진수로 변환합니다
 	 * 
-	 * @param inputOctal
-	 *            The octal number
-	 * @return The decimal number
 	 */
 	public static int convertOctalToDecimal(String inputOctal) {
 
 		try {
-			// Actual conversion of Octal to Decimal:
+			// Octal에서 Decimal 로의 실제 변환 
 			Integer outputDecimal = Integer.parseInt(inputOctal, 8);
 			return outputDecimal;
 		} catch (NumberFormatException ne) {
