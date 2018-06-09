@@ -39,13 +39,13 @@ class CountingSort implements SortAlgorithm {
     public <T extends Comparable<T>> List<T> sort(List<T> list) {
 
         Map<T, Integer> frequency = new TreeMap<>();
-        // The final output array
+        // The final output array // 최종 결과를 저장할 배열
         List<T> sortedArray = new ArrayList<>(list.size());
 
-        // Counting the frequency of @param array elements
+        // Counting the frequency of @param array elements // 배열 요소들의 빈도 세기
         list.forEach(v -> frequency.put(v, frequency.getOrDefault(v, 0) + 1));
 
-        // Filling the sortedArray
+        // Filling the sortedArray // 정렬된 배열 채우기
         for(Map.Entry<T, Integer> element : frequency.entrySet()) {
             for(int j=0; j<element.getValue(); j++){
                 sortedArray.add(element.getKey());
