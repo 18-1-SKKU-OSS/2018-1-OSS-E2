@@ -1,13 +1,13 @@
 /**
  * This implements Queues by using the class Queue.
- * ÀÌ°ÍÀº Å¥ Å¬·¡½º¸¦ »ç¿ëÇÏ¿© Å¥¸¦ ±¸ÇöÇÕ´Ï´Ù. 
+ * ì´ê²ƒì€ í í´ë˜ìŠ¤ë¥¼ ì‚¬ìš©í•˜ì—¬ íë¥¼ êµ¬í˜„í•©ë‹ˆë‹¤. 
  * A queue data structure functions the same as a real world queue.
  * The elements that are added first are the first to be removed.
  * New elements are added to the back/rear of the queue.
  *
- * Å¥´Â ½ÇÁ¦ »ıÈ°¿¡¼­ÀÇ Å¥¿Í µ¿ÀÏÇÏ°Ô ÀÛµ¿ÇÏ´Â ÀÚ·á±¸Á¶ÀÔ´Ï´Ù. 
- * °¡Àå ¸ÕÀú µé¾î¿Â °ÍÀÌ °¡Àå ¸ÕÀú »èÁ¦µË´Ï´Ù. (FIFO)
- * »õ·Î¿î ¿ø¼ÒµéÀº Å¥ÀÇ °¡Àå µÚ¿¡ »ğÀÔµË´Ï´Ù. 
+ * íëŠ” ì‹¤ì œ ìƒí™œì—ì„œì˜ íì™€ ë™ì¼í•˜ê²Œ ì‘ë™í•˜ëŠ” ìë£Œêµ¬ì¡°ì…ë‹ˆë‹¤. 
+ * ê°€ì¥ ë¨¼ì € ë“¤ì–´ì˜¨ ê²ƒì´ ê°€ì¥ ë¨¼ì € ì‚­ì œë©ë‹ˆë‹¤. (FIFO)
+ * ìƒˆë¡œìš´ ì›ì†Œë“¤ì€ íì˜ ê°€ì¥ ë’¤ì— ì‚½ì…ë©ë‹ˆë‹¤. 
  * 
  * 
  * @author Unknown
@@ -15,27 +15,27 @@
  */
 class Queue{
 	/** Max size of the queue */
-	/** Å¥ÀÇ ÃÖ´ë Å©±â */
+	/** íì˜ ìµœëŒ€ í¬ê¸° */
 	private int maxSize;
 	/** The array representing the queue */
-	/** Å¥¸¦ ³ªÅ¸³»´Â ¹è¿­ */
+	/** íë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë°°ì—´ */
 	private int[] queueArray;
 	/** Front of the queue */
-	/** Å¥ÀÇ ¾ÕºÎºĞ*/
+	/** íì˜ ì•ë¶€ë¶„*/
 	private int front;
 	/** Rear of the queue */
-	/** Å¥ÀÇ µŞºÎºĞ*/
+	/** íì˜ ë’·ë¶€ë¶„*/
 	private int rear;
 	/** How many items are in the queue */
-	/** Å¥¿¡ µé¾îÀÖ´Â ¿ø¼ÒÀÇ ¼ö*/
+	/** íì— ë“¤ì–´ìˆëŠ” ì›ì†Œì˜ ìˆ˜*/
 	private int nItems;
 	
 	/**
 	 * Constructor
-	 * »ı¼ºÀÚ
+	 * ìƒì„±ì
 	 * 
 	 * @param size Size of the new queue
-	 * size º¯¼ö´Â »õ·Î¿î Å¥ÀÇ ÃÖ´ë Å©±â¸¦ ³ªÅ¸³À´Ï´Ù. 
+	 * size ë³€ìˆ˜ëŠ” ìƒˆë¡œìš´ íì˜ ìµœëŒ€ í¬ê¸°ë¥¼ ë‚˜íƒ€ëƒ…ë‹ˆë‹¤. 
 	 */
 	public Queue(int size){
 		maxSize = size;
@@ -47,13 +47,13 @@ class Queue{
 	
 	/**
 	 * Inserts an element at the rear of the queue
-	 * Å¥ÀÇ °¡Àå µŞºÎºĞ¿¡ ¿ø¼Ò¸¦ ³Ö½À´Ï´Ù. 
+	 * íì˜ ê°€ì¥ ë’·ë¶€ë¶„ì— ì›ì†Œë¥¼ ë„£ìŠµë‹ˆë‹¤. 
 	 * 
 	 * @param x element to be added
 	 * @return True if the element was added successfully
 	 * 
-	 * x º¯¼ö´Â Å¥¿¡ ´õÇØÁú ¿ø¼ÒÀÔ´Ï´Ù.
-	 * Å¥¿¡ ¿ø¼Ò°¡ ¼º°øÀûÀ¸·Î »ğÀÔµÇ¸é true¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * x ë³€ìˆ˜ëŠ” íì— ë”í•´ì§ˆ ì›ì†Œì…ë‹ˆë‹¤.
+	 * íì— ì›ì†Œê°€ ì„±ê³µì ìœ¼ë¡œ ì‚½ì…ë˜ë©´ trueë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	public boolean insert(int x){
 		if(isFull())
@@ -68,10 +68,10 @@ class Queue{
 	
 	/**
 	 * Remove an element from the front of the queue
-	 * Å¥ÀÇ °¡Àå ¾Õ¿¡ ÀÖ´Â ¿ø¼Ò¸¦ Áö¿ó´Ï´Ù. 
+	 * íì˜ ê°€ì¥ ì•ì— ìˆëŠ” ì›ì†Œë¥¼ ì§€ì›ë‹ˆë‹¤. 
 	 * 
 	 * @return the new front of the queue
-	 * »õ·Î¿î Å¥ÀÇ °¡Àå ¾ÕºÎºĞÀÇ ¿ì³Ê¼Ò¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * ìƒˆë¡œìš´ íì˜ ê°€ì¥ ì•ë¶€ë¶„ì˜ ë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	public int remove(){ //Remove an element from the front of the queue
 		if(isEmpty()){
@@ -88,10 +88,10 @@ class Queue{
 	
 	/**
 	 * Checks what's at the front of the queue
-	 * Å¥ÀÇ °¡Àå ¾ÕºÎºĞ¿¡ ¾î¶² ¿ø¼Ò°¡ ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù.
+	 * íì˜ ê°€ì¥ ì•ë¶€ë¶„ì— ì–´ë–¤ ì›ì†Œê°€ ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤.
 	 * 
 	 * @return element at the front of the queue
-	 * Å¥ÀÇ °¡Àå ¾ÕºÎºĞ¿¡ ÀÖ´Â ¿ø¼Ò¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íì˜ ê°€ì¥ ì•ë¶€ë¶„ì— ìˆëŠ” ì›ì†Œë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	
 	public int peekFront(){
@@ -100,10 +100,10 @@ class Queue{
 	
 	/**
 	 * Checks what's at the rear of the queue
-	 *  Å¥ÀÇ °¡Àå µÚ¿¡ ¾î¶² ¿ø¼Ò°¡ ÀÖ´ÂÁö È®ÀÎÇÕ´Ï´Ù. 
+	 *  íì˜ ê°€ì¥ ë’¤ì— ì–´ë–¤ ì›ì†Œê°€ ìˆëŠ”ì§€ í™•ì¸í•©ë‹ˆë‹¤. 
 	 * 
 	 * @return element at the rear of the queue
-	 *  Å¥ÀÇ °¡Àå µÚ¿¡ ÀÖ´Â ¿ø¼Ò¸¦ ¸®ÅÏÇÕ´Ï´Ù.
+	 *  íì˜ ê°€ì¥ ë’¤ì— ìˆëŠ” ì›ì†Œë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤.
 	 */
 	public int peekRear(){
 		return queueArray[rear];
@@ -111,11 +111,11 @@ class Queue{
 	
 	/**
 	 * Returns true if the queue is empty
-	 * Å¥°¡ ºñ¾îÀÖÀ¸¸é true¸¦ ¸®ÅÏÇÕ´Ï´Ù.
+	 * íê°€ ë¹„ì–´ìˆìœ¼ë©´ trueë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤.
 	 * 
 	 * 
 	 * @return true if the queue is empty
-	 * Å¥°¡ ºñ¾îÀÖÀ¸¸é true¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íê°€ ë¹„ì–´ìˆìœ¼ë©´ trueë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	public boolean isEmpty(){
 		return(nItems == 0);
@@ -123,10 +123,10 @@ class Queue{
 	
 	/**
 	 * Returns true if the queue is full
-	 * Å¥°¡ ²Ë Â÷ ÀÖÀ¸¸é true¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íê°€ ê½‰ ì°¨ ìˆìœ¼ë©´ trueë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 * 
 	 * @return true if the queue is full
-	 * Å¥°¡ ²Ë Â÷ ÀÖÀ¸¸é true¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íê°€ ê½‰ ì°¨ ìˆìœ¼ë©´ trueë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	public boolean isFull(){
 		return(nItems == maxSize);
@@ -134,10 +134,10 @@ class Queue{
 	
 	/**
 	 * Returns the number of elements in the queue
-	 * Å¥¿¡ µé¾îÀÖ´Â ¿ø¼ÒµéÀÇ ¼ö¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íì— ë“¤ì–´ìˆëŠ” ì›ì†Œë“¤ì˜ ìˆ˜ë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 * 
 	 * @return number of elements in the queue
-	 * Å¥¿¡ µé¾îÀÖ´Â ¿ø¼ÒµéÀÇ ¼ö¸¦ ¸®ÅÏÇÕ´Ï´Ù. 
+	 * íì— ë“¤ì–´ìˆëŠ” ì›ì†Œë“¤ì˜ ìˆ˜ë¥¼ ë¦¬í„´í•©ë‹ˆë‹¤. 
 	 */
 	public int getSize(){
 		return nItems;
@@ -146,14 +146,14 @@ class Queue{
 
 /**
  * This class is the example for the Queue class
- * ÀÌ Å¬·¡½º´Â Å¥ Å¬·¡½ºÀÇ ÇÑ ¿¹½ÃÀÔ´Ï´Ù. 
+ * ì´ í´ë˜ìŠ¤ëŠ” í í´ë˜ìŠ¤ì˜ í•œ ì˜ˆì‹œì…ë‹ˆë‹¤. 
  * @author Unknown
  *
  */
 public class Queues{
 	/**
 	 * Main method
-	 * ¸ŞÀÎ ¸Ş¼­µå
+	 * ë©”ì¸ ë©”ì„œë“œ
 	 * 
 	 * @param args Command line arguments
 	 */
@@ -165,17 +165,17 @@ public class Queues{
 		myQueue.insert(3);
 		//[10(front), 2, 5, 3(rear)]
 		
-		System.out.println(myQueue.isFull()); //Will print true  true¸¦ Ãâ·ÂÇÒ °ÍÀÔ´Ï´Ù. 
+		System.out.println(myQueue.isFull()); //Will print true  trueë¥¼ ì¶œë ¥í•  ê²ƒì…ë‹ˆë‹¤. 
 		
 		myQueue.remove(); //Will make 2 the new front, making 10 no longer part of the queue 
-		// 10À» Áö¿òÀ¸·Î½á 2°¡ °¡Àå ¾Õ¿¡ À§Ä¡ÇÏ°Ô µË´Ï´Ù. 
+		// 10ì„ ì§€ì›€ìœ¼ë¡œì¨ 2ê°€ ê°€ì¥ ì•ì— ìœ„ì¹˜í•˜ê²Œ ë©ë‹ˆë‹¤. 
 		//[10, 2(front), 5, 3(rear)]
 		
 		myQueue.insert(7); //Insert 7 at the rear which will be index 0 because of wrap around
-		//7À» ³ÖÀ¸¸é 7ÀÇ À§Ä¡´Â 0ÀÌ µÇ´Âµ¥ ÀÌ°ÍÀº ¹è¿­ÀÇ °¡Àå ¸¶Áö¸·ÀÎ 3À§ µÚ¸¦ ¹è¿­ÀÇ °¡Àå ¾ÕÀÌ¶ó°í º¸±â ¶§¹®ÀÔ´Ï´Ù. 
+		//7ì„ ë„£ìœ¼ë©´ 7ì˜ ìœ„ì¹˜ëŠ” 0ì´ ë˜ëŠ”ë° ì´ê²ƒì€ ë°°ì—´ì˜ ê°€ì¥ ë§ˆì§€ë§‰ì¸ 3ìœ„ ë’¤ë¥¼ ë°°ì—´ì˜ ê°€ì¥ ì•ì´ë¼ê³  ë³´ê¸° ë•Œë¬¸ì…ë‹ˆë‹¤. 
 		// [7(rear), 2(front), 5, 3]
 		
-		System.out.println(myQueue.peekFront()); //Will print 2    2¸¦ Ãâ·ÂÇÒ °ÍÀÔ´Ï´Ù. 
-		System.out.println(myQueue.peekRear()); //Will print 7 	   7À» Ãâ·ÂÇÒ °ÍÀÔ´Ï´Ù. 
+		System.out.println(myQueue.peekFront()); //Will print 2    2ë¥¼ ì¶œë ¥í•  ê²ƒì…ë‹ˆë‹¤. 
+		System.out.println(myQueue.peekRear()); //Will print 7 	   7ì„ ì¶œë ¥í•  ê²ƒì…ë‹ˆë‹¤. 
 	}
 }
